@@ -1,15 +1,15 @@
-import { Box, Typography } from "@mui/material";
 import Popular from "@/components/Popular/Popular";
+import ThemeToggler from "@/components/ThemeToggler/ThemeToggler";
 import Trending from "@/components/Trending/Trending";
+import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
+import Link from "next/link";
 
 const Home = async () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Typography variant="h4">Aniweb</Typography>
-      <Box>
-        <Popular />
-        <Trending />
-      </Box>
+    <main className="min-h-screen w-full">
+      <ThemeToggler />
+      <VideoPlayer videoUrl="https://www104.vipanicdn.net/streamhls/862301f3a6c2fd6a02b68b646f7b5fea/ep.1.1703877575.m3u8" />
+      <Link href={"/search"}>Go to search</Link>
     </main>
   );
 };

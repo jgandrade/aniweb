@@ -11,13 +11,13 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.4",
+    "@radix-ui/react-slot": "^1.0.2",
     "@tanstack/react-query": "^5.17.10",
+    "@vidstack/react": "^1.10.3",
     "axios": "^1.6.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "hls.js": "^1.5.3",
     "lucide-react": "^0.320.0",
     "next": "14.0.4",
     "next-themes": "^0.2.1",

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Loading = () => {
-  return <div className="min-h-screen bg-slate-400">Loading...</div>;
+  return <div className="min-h-screen">Loading...</div>;
 };
 
 export default Loading;
