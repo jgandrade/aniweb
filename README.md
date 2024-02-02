@@ -1,6 +1,6 @@
 # Aniweb
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/your-username/aniweb)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/jgandrade/aniweb)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
@@ -19,7 +19,7 @@ Aniweb is a web application project built with [Next.js](https://nextjs.org/) an
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/aniweb.git
+   git clone https://github.com/jgandrade/aniweb.git
    cd aniweb
    npm install
    ```
