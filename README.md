@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aniweb
+
+[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/your-username/aniweb)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+## Overview
+
+Aniweb is a web application project built with [Next.js](https://nextjs.org/) and [React](https://reactjs.org/). It leverages various libraries and tools for enhanced functionality and development experience.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/your-username/aniweb.git
+   cd aniweb
+   npm install
+   ```
 
-## Learn More
+## Usage
+   To watch Anime you like free of adds
 
-To learn more about Next.js, take a look at the following resources:
+### Run the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Visit http://localhost:3000 in your browser.
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **npm run dev:** Start the development server.
+- **npm run build:** Build the project for production.
+- **npm start:** Start the production server.
+- **npm run lint:** Run linting using Next.js lint.
+- **npm test:** Run Jest for testing.
+- **npm run coverage:** Run Jest with coverage reporting.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Dependencies
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- ... (and others listed in `package.json`)
+
+## Development Dependencies
+
+- [ESLint](https://eslint.org/)
+- [Jest](https://jestjs.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- ... (and others listed in `package.json`)
+
+## Contributing
+
+Feel free to contribute to Aniweb by opening issues or creating pull requests. Your feedback and collaboration are highly appreciated.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
