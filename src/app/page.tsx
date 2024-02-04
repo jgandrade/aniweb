@@ -1,6 +1,4 @@
-import Popular from "@/components/Popular/Popular";
 import ThemeToggler from "@/components/ThemeToggler/ThemeToggler";
-import Trending from "@/components/Trending/Trending";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import Link from "next/link";
 
