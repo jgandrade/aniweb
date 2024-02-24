@@ -217,3 +217,15 @@ export type AnimeInfoType = {
     airDate: any;
   }>;
 };
+
+export type WatchInfoType = {
+  headers: {
+    Referer: string;
+  };
+  sources: Array<{
+    url: string;
+    isM3U8: boolean;
+    quality: string;
+  }>;
+  download: string;
+};

@@ -17,7 +17,6 @@ const VideoPlayer = ({ videoUrl }: { videoUrl: string }) => {
     >
       <MediaProvider />
       <DefaultVideoLayout
-        thumbnails="https://image.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU/storyboard.vtt"
         icons={defaultLayoutIcons}
         slots={{
           smallLayout: {
