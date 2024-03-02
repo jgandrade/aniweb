@@ -1,13 +1,9 @@
-import { AxiosResponse } from "axios";
-import axios from "./axios";
+import fetchApi from "./fetchApi";
 import { PopularTrendingType } from "@/types/AnimeTypes";
 
-const getPopularAnime = async (): Promise<AxiosResponse<PopularTrendingType>> => {
-  const response = await axios.get<PopularTrendingType>(
-    `/meta/anilist/popular`
-  );
-
-  return response;
+const getPopularAnime = async () => {
+  const response = await fetchApi(`/meta/anilist/popular`, "get");
+  return response as PopularTrendingType;
 };
 
 export default getPopularAnime;

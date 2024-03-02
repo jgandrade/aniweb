@@ -1,15 +1,9 @@
-import { AxiosResponse } from "axios";
-import axios from "./axios";
 import { SearchDataType } from "@/types/AnimeTypes";
+import fetchApi from "./fetchApi";
 
-const searchAnimeData = async (
-  searchQuery: string
-): Promise<AxiosResponse<SearchDataType>> => {
-  const response = await axios.get<SearchDataType>(
-    `/meta/anilist/${searchQuery}`
-  );
-
-  return response;
+const searchAnimeData = async (searchQuery: string) => {
+  const response = await fetchApi(`/meta/anilist/${searchQuery}`, "get");
+  return response as SearchDataType;
 };
 
 export default searchAnimeData;
