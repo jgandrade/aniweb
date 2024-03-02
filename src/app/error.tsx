@@ -1,6 +1,6 @@
 "use client";
-const Error = () => {
+const ErrorPage = () => {
   return <div>Error has occured in the server</div>;
 };
 
-export default Error;
+export default ErrorPage;

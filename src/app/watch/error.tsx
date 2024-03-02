@@ -1,9 +1,9 @@
 "use client";
 
-const Error = () => {
+const ErrorPage = () => {
   return (
     <div>The episode was not found or there was an error in the server</div>
   );
 };
 
-export default Error;
+export default ErrorPage;

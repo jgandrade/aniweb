@@ -1,6 +1,5 @@
 "use client";
 
-import Error from "@/components/Error/Error";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import useWatch from "@/hooks/useWatch";
 import { AnimeInfoType } from "@/types/AnimeTypes";
