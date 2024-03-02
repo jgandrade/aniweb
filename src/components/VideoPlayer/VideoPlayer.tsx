@@ -9,27 +9,24 @@ import {
 const EmptyDiv = () => <div className="hidden"></div>;
 const VideoPlayer = ({ videoUrl }: { videoUrl: string }) => {
   return (
-    <MediaPlayer
-      title="Sprite Fight"
-      src={videoUrl}
-      className="w-100"
-      playsInline
-    >
-      <MediaProvider />
-      <DefaultVideoLayout
-        icons={defaultLayoutIcons}
-        slots={{
-          smallLayout: {
-            pipButton: <EmptyDiv />,
-            googleCastButton: <EmptyDiv />,
-          },
-          largeLayout: {
-            pipButton: <EmptyDiv />,
-            googleCastButton: <EmptyDiv />,
-          },
-        }}
-      />
-    </MediaPlayer>
+    <div>
+      <MediaPlayer src={videoUrl} autoPlay>
+        <MediaProvider />
+        <DefaultVideoLayout
+          icons={defaultLayoutIcons}
+          slots={{
+            smallLayout: {
+              pipButton: <EmptyDiv />,
+              googleCastButton: <EmptyDiv />,
+            },
+            largeLayout: {
+              pipButton: <EmptyDiv />,
+              googleCastButton: <EmptyDiv />,
+            },
+          }}
+        />
+      </MediaPlayer>
+    </div>
   );
 };
 

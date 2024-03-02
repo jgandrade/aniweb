@@ -10,7 +10,7 @@ const AnimeCard = ({
   ...animeData
 }: PopularTrendingResultsType | SearchResultType) => {
   return (
-    <Link href={`/watch/${animeData.id}`}>
+    <Link href={`/watch/${animeData.id}?episode=1`}>
       <div className="flex flex-col justify-center items-center">
         <Image
           src={animeData.image}

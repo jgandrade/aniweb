@@ -1,54 +1,23 @@
-"use client";
+import Link from "next/link";
+import Watch from "../Watch";
+import getAnimeInfo from "@/lib/getAnimeInfo";
 
-import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
-import useInfo from "@/hooks/useInfo";
-import getWatchInfo from "@/lib/getWatchInfo";
-import { AnimeInfoType, WatchInfoType } from "@/types/AnimeTypes";
-import { Loader } from "lucide-react";
-import { useParams } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
-
-const WatchPage = () => {
-  const { animeId } = useParams();
-  const [videoLoading, setVideoLoading] = useState(true);
-  const { data, error, isLoading } = useInfo(animeId as string);
-  const [watchInfo, setWatchInfo] = useState<WatchInfoType | null>(null);
-
-  const getWatchData = useCallback(
-    async (animeId: string) => {
-      setVideoLoading(true);
-      const watchData = await getWatchInfo(animeId);
-      setWatchInfo(watchData);
-      setVideoLoading(false);
-    },
-    [data]
-  );
-
-  useEffect(() => {
-    if (!isLoading) {
-      getWatchData(data?.episodes[0].id as string);
-    }
-  }, [isLoading, getWatchData]);
-
-  if (isLoading) {
-    return <Loader />;
-  }
+const WatchPage = async ({ params }: { params: { animeId: string } }) => {
+  const animeInfo = await getAnimeInfo(params.animeId);
 
   return (
-    <div>
-      {!videoLoading && (
-        <VideoPlayer videoUrl={watchInfo?.sources[4].url as string} />
-      )}
+    <div className="flex flex-col justify-center items-center">
+      <Watch animeInfo={animeInfo} />
       <div className="flex justify-center items-center gap-3">
-        {data?.episodes.map((episode, index) => {
+        {animeInfo.episodes.map((episode, index) => {
           return (
-            <button
+            <Link
+              href={`?episode=${index + 1}`}
               key={`${index}-episode`}
               className="border-red-400"
-              onClick={() => getWatchData(episode.id)}
             >
               {episode.title}
-            </button>
+            </Link>
           );
         })}
       </div>
