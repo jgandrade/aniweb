@@ -1,12 +1,9 @@
 import { SearchDataType } from "@/types/AnimeTypes";
-import axios from "./axios";
+import fetchApi from "./fetchApi";
 
 const searchAnimeData = async (searchQuery: string) => {
-  const response = await axios.get<SearchDataType>(
-    `/meta/anilist/${searchQuery}`
-  );
-
-  return response.data;
+  const response = await fetchApi(`/meta/anilist/${searchQuery}`, "get");
+  return response as SearchDataType;
 };
 
 export default searchAnimeData;

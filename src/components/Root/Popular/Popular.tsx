@@ -12,7 +12,7 @@ const Popular = () => {
 
   return (
     <div className="flex flex-wrap gap-3 justify-center items-center">
-      {data?.data.results.map((animeData) => {
+      {data?.results.map((animeData) => {
         return <AnimeCard {...animeData} />;
       })}
     </div>

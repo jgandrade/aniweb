@@ -18,7 +18,7 @@ const WatchPage = () => {
     async (animeId: string) => {
       setVideoLoading(true);
       const watchData = await getWatchInfo(animeId);
-      setWatchInfo(watchData.data);
+      setWatchInfo(watchData);
       setVideoLoading(false);
     },
     [data]
@@ -26,7 +26,7 @@ const WatchPage = () => {
 
   useEffect(() => {
     if (!isLoading) {
-      getWatchData(data?.data.episodes[0].id as string);
+      getWatchData(data?.episodes[0].id as string);
     }
   }, [isLoading, getWatchData]);
 
@@ -40,7 +40,7 @@ const WatchPage = () => {
         <VideoPlayer videoUrl={watchInfo?.sources[4].url as string} />
       )}
       <div className="flex justify-center items-center gap-3">
-        {data?.data.episodes.map((episode, index) => {
+        {data?.episodes.map((episode, index) => {
           return (
             <button
               key={`${index}-episode`}

@@ -1,15 +1,9 @@
-import { AxiosResponse } from "axios";
-import axios from "./axios";
+import fetchApi from "./fetchApi";
 import { AnimeInfoType } from "@/types/AnimeTypes";
 
-const getAnimeInfo = async (
-  animeId: string
-): Promise<AxiosResponse<AnimeInfoType>> => {
-  const response = await axios.get<AnimeInfoType>(
-    `/meta/anilist/info/${animeId}`
-  );
-
-  return response;
+const getAnimeInfo = async (animeId: string) => {
+  const response = await fetchApi(`/meta/anilist/info/${animeId}`, "get");
+  return response as AnimeInfoType;
 };
 
 export default getAnimeInfo;
