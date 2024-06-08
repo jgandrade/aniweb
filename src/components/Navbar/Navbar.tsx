@@ -24,9 +24,9 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex justify-between items-center h-16 px-5">
-      <h1 className="text-primary text-2xl font-bold cursor-pointer" onClick={navigateHome}>
+      <button className="text-primary text-2xl font-bold cursor-pointer" onClick={navigateHome}>
         Aniweb
-      </h1>
+      </button>
       <div className="flex justify-between items-center gap-3">
         <div className="relative h-11">
           <input
