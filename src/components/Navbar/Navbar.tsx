@@ -11,16 +11,22 @@ const Navbar = () => {
   const handleSearchInput = (value: string) => {
     setSearchInput(value);
   };
-  
+
   const handleSearch = (key: string) => {
     if (key === "Enter") {
       router.push(`/search/${searchInput}`);
     }
   };
 
+  const navigateHome = () => {
+    router.push(`/`);
+  };
+
   return (
     <div className="w-full flex justify-between items-center h-16 px-5">
-      <h1 className="text-primary text-2xl font-bold">Aniweb</h1>
+      <button className="text-primary text-2xl font-bold cursor-pointer" onClick={navigateHome}>
+        Aniweb
+      </button>
       <div className="flex justify-between items-center gap-3">
         <div className="relative h-11">
           <input
