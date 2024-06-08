@@ -19,7 +19,7 @@ const Watch = ({ animeInfo }: { animeInfo: AnimeInfoType }) => {
 
   if (data) {
     return (
-      <div>
+      <div className="w-full">
         {!isLoading && (
           <VideoPlayer
             videoUrl={
